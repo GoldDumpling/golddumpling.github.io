@@ -153,7 +153,7 @@
 				frag += '<div class="card" data-id="'+ v.id +'"><div class="inside">\
 				<div class="front"><img src="'+ v.img +'"\
 				alt="'+ v.name +'" /></div>\
-				<div class="back"><img src="golddumpling.github.io\abspace\css\Ёж.png"\
+				<div class="back"><img src="css\Ёж.png"\
 				alt="Codepen" /></div></div>\
 				</div>';
 			});
@@ -174,47 +174,47 @@
 		},
 		{
 			name: "css3",
-			img: "golddumpling.github.io\abspace\css\Planet_Mercury_-_GPN-2000-000465.jpg",
+			img: "css\Planet_Mercury_-_GPN-2000-000465.jpg",
 			id: 2
 		},
 		{
 			name: "html5",
-			img: "golddumpling.github.io\abspace\css\Venus_globe.jpg",
+			img: "css\Venus_globe.jpg",
 			id: 3
 		},
 		{
 			name: "jquery",
-			img: "golddumpling.github.io\abspace\css\The_Earth_seen_from_Apollo_17.jpg",
+			img: "css\The_Earth_seen_from_Apollo_17.jpg",
 			id: 4
 		}, 
 		{
 			name: "javascript",
-			img: "golddumpling.github.io\abspace\css\Mars_Hubble.jpg",
+			img: "css\Mars_Hubble.jpg",
 			id: 5
 		},
 		{
 			name: "node",
-			img: "golddumpling.github.io\abspace\css\Jupiter_Auroras.jpg",
+			img: "css\Jupiter_Auroras.jpg",
 			id: 6
 		},
 		{
 			name: "photoshop",
-			img: "golddumpling.github.io\abspace\css\Jupiter_Auroras.jpg",
+			img: "css\Jupiter_Auroras.jpg",
 			id: 7
 		},
 		{
 			name: "python",
-			img: "golddumpling.github.io\abspace\css\Satur_with_auroras.jpg",
+			img: "css\Satur_with_auroras.jpg",
 			id: 8
 		},
 		{
 			name: "rails",
-			img: "golddumpling.github.io\abspace\css\Uranus_clouds.jpg",
+			img: "css\Uranus_clouds.jpg",
 			id: 9
 		},
 		{
 			name: "sass",
-			img: "golddumpling.github.io\abspace\css\Neptune_Voyager2_color_calibrated.png",
+			img: "css\Neptune_Voyager2_color_calibrated.png",
 			id: 10
 		},
 	];
