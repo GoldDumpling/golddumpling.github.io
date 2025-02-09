@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pangolin">
+<title> аввппрордлрпроргоаираро </title>
+<style>
+    
+    span.quest {font-weight: bold;}
+    label {margin-left: 15px;}
+    .nav {font-size: 16px;}
+    body {
+        
+        color: rgb(rgb(255, 255, 255));
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+      }
+      div:nth-child(1) {
+        font-family: 'Pangolin', serif;
+      }
+      div:nth-child(2) {
+        font-family: 'Pangolin', serif;
+      }
+      a {
+    color: rgb(212, 224, 252); /* Цвет текста */
+
+ button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676D7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+   }
+
+</style>
+</head>
+<body>
+<div >
+    <div style="display:flex; justify-content: space-between;">
+    </div>
+<script>
+// Заголовок страницы (h2)
+var title = 'Марс - Тест';
+// Подзаголовок (h3)
+var subtitle = "Этот тест позволяет оценить Ваши знания";
+// Это ваши вопросы
+var questions=[
+{
+	text: "Кто первым увидел Марс в телескоп?",
+	answers: ["М. Ломоносов",
+		  "Его нельзя увидеть в телескопе.",
+		  "Г. Галилей"
+        ],
+	correctAnswer: 2 // нумерация ответов с нуля!
+},
+{
+	text: "Как называется самая высокая гора на Марсе?",
+	answers: ["Олимп",
+		  "Элимп",
+		  "Эверест"],
+	correctAnswer: 0
+},
+{
+	text: "Какой самый большой кратер солнечной системы обнаружен на Марсе?",
+	answers: ["Криумф",
+		  "Олимп",
+		  "равнина Утопии"],
+	correctAnswer: 2
+},
+{
+	text: "Почему Марс красного цвета?",
+	answers: ["из-за высокого содержания в почве оксида и диоксида железа",
+		  "он таким и появился",
+		  "из-за высокого напряжения"],
+	correctAnswer: 0
+},
+{
+	text: "Как назывался первый советский марсоход?",
+	answers: ["Марс-2",
+		  "ПрОП-М",
+		  "КИПМ-1"],
+	correctAnswer: 1
+},
+{
+	text: "Какова средняя температура Марса?",
+	answers: ["-60°С",
+		  "-90°С",
+		  "-70°С"],
+	correctAnswer: 0
+},
+{
+	text: "Каков радиус Марса?",
+	answers: ["3,39×10³",
+		  "4,40×10³",
+		  "2,59×10³"],
+	correctAnswer: 2
+},
+{
+	text: "Из чего в основном состоит атмосфера Марса?",
+	аanswers: [" из кислород",
+		  " из углекислого газа",
+		  " из азота"],
+	correctAnswer: 1
+}
+
+];
+
+var yourAns = new Array;
+var score = 0;
+
+function Engine(question, answer) {yourAns[question]=answer;}
+
+function Score(){
+   var answerText = "Результаты:\n";
+   for(var i = 0; i < yourAns.length; ++i){
+	var num = i+1;
+	answerText=answerText+"\n    Вопрос №"+ num +"";
+	if(yourAns[i]!=questions[i].correctAnswer){
+	    answerText=answerText+"\n    Правильный ответ: " +
+		questions[i].answers[questions[i].correctAnswer] + "\n";
+	  }
+        else{
+	    answerText=answerText+": Верно! \n";
+	    ++score;
+	    }
+       }
+
+   answerText=answerText+"\nВсего правильных ответов: "+score+"\n";
+
+   alert(answerText);
+   if(score>7){
+	    alert('Запомни этот код и запиши его куда-нибудь, он тебе понадобится - 239452')
+	  }
+   yourAns = [];
+   score = 0;
+   clearForm("quiz");
+}
+function clearForm(name) {
+   var f = document.forms[name];
+   for(var i = 0; i < f.elements.length; ++i) {
+	if(f.elements[i].checked)
+		f.elements[i].checked = false;
+}
+}
+</script>
+<h2><script>document.write(title)</script></h2>
+<h3><script>document.write(subtitle)</script></h3>
+
+    <form name="quiz">
+    <ol>
+        <script>
+        for(var q=0; q<questions.length; ++q) {
+           var question = questions[q];
+           var idx = 1 + q;
+
+           document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+           for(var i in question.answers) {
+            document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+        }
+            document.writeln('</li>');
+        }
+        </script>
+    </ol>
+        <br>
+        <button onClick="Score()" value="Проверить результаты">
+            Проверить результаты
+            </button>
+    </form>
+    <p><a href="#Имя предыдущего файла#" class="nav">На следующую</a></p>
+</div>
+</body>
+ </html>   

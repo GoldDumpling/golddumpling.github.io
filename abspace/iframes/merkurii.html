@@ -1,0 +1,174 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pangolin">
+<title> Меркурий!!!!!!!!! </title>
+<style>
+    
+    span.quest {font-weight: bold;}
+    label {margin-left: 15px;}
+    .nav {font-size: 16px;}
+    body {
+        
+        color: rgb(rgb(255, 255, 255));
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+      }
+      div:nth-child(1) {
+        font-family: 'Pangolin', serif;
+      }
+      div:nth-child(2) {
+        font-family: 'Pangolin', serif;
+      }
+      a {
+    color: rgb(212, 224, 252); /* Цвет текста */
+
+ button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676D7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+   }
+
+</style>
+</head>
+<body>
+<div >
+    <div style="display:flex; justify-content: space-between;">
+    </div>
+<script>
+// Заголовок страницы (h2)
+var title = 'Меркурий - Тест';
+// Подзаголовок (h3)
+var subtitle = "Этот тест позволяет оценить Ваши знания";
+// Это ваши вопросы
+var questions=[
+{
+	text: "Какой цвет у Меркурия?",
+	answers: ["Cерый",
+		  "Белый",
+		  "Красный"
+        ],
+	correctAnswer: 0 // нумерация ответов с нуля!
+},
+{
+	text: "В честь бога чего назван Меркурий?",
+	answers: ["Любовь",
+		  "Торговля",
+		  "Красота"],
+	correctAnswer: 1
+},
+{
+	text: "Каков период обращения Меркурия к Солнцу?",
+	answers: ["2",
+		  "3",
+		  "4"],
+	correctAnswer: 2
+},
+{
+	text: "Какое максимальное видимое расстояние Меркурия от Солнца?",
+	answers: ["46 млн км",
+		  "38 млн км",
+		  "59 млн км"],
+	correctAnswer: 0
+},
+{
+	text: "Чему равен синодический период обращения Меркурия?",
+	answers: ["115,88 дням",
+		  "96,59 дням",
+		  "130,96 дням"],
+	correctAnswer: 0
+},
+{
+	text: "Как выглядит поверхность Меркурия? (Выбери правильный факт)",
+	answers: ["Одна из самых заметных деталей поверхности Меркурия — равнина Холода.",
+		  "Поверхность Меркурия слишком неровная.",
+		  "Поверхность Меркурия во многом напоминает лунную. "],
+	correctAnswer: 2
+},
+{
+	text: "Какие особенности климата и температуры на Меркурии? (Выберите неверный факт)",
+	answers: ["Меркурий имеет форму идеального шара и его радиус равен 2440 км",
+		  "Особенности климата и температуры на Меркурии включают наличие атмосферы, умеренный наклон оси вращения, небольшие перепады температуры и наличие сезонов.",
+		  "Температура поверхности изменяется в обширном диапазоне, от -173 °C на ночной стороне и полюсах до 430 °C на экваторе в полдень "],
+	correctAnswer: 2
+},
+{
+	text: "Что можно увидеть в телескоп при наблюдении за Меркурием?",
+	answers: ["Её невозможно увидеть даже в телескопе",
+		  "Большие потемнения удалённой от терминатора поверхности, Лёгкие потемнения вдоль линии терминатора, Поверхность планеты, Фазы планеты",
+		  "Лёгкие потемнения вдоль линии терминатора, Поверхность планеты, Фазы планет"],
+	correctAnswer: 1
+}
+
+];
+
+var yourAns = new Array;
+var score = 0;
+
+function Engine(question, answer) {yourAns[question]=answer;}
+
+function Score(){
+   var answerText = "Результаты:\n";
+   for(var i = 0; i < yourAns.length; ++i){
+	var num = i+1;
+	answerText=answerText+"\n    Вопрос №"+ num +"";
+	if(yourAns[i]!=questions[i].correctAnswer){
+	    answerText=answerText+"\n    Правильный ответ: " +
+		questions[i].answers[questions[i].correctAnswer] + "\n";
+	  }
+        else{
+	    answerText=answerText+": Верно! \n";
+	    ++score;
+	    }
+       }
+
+   answerText=answerText+"\nВсего правильных ответов: "+score+"\n";
+
+   alert(answerText);
+   if(score>7){
+	    alert('Запомни этот код и запиши его куда-нибудь, он тебе понадобится - 256418')
+	  }
+   yourAns = [];
+   score = 0;
+   clearForm("quiz");
+}
+function clearForm(name) {
+   var f = document.forms[name];
+   for(var i = 0; i < f.elements.length; ++i) {
+	if(f.elements[i].checked)
+		f.elements[i].checked = false;
+}
+}
+</script>
+<h2><script>document.write(title)</script></h2>
+<h3><script>document.write(subtitle)</script></h3>
+
+    <form name="quiz">
+    <ol>
+        <script>
+        for(var q=0; q<questions.length; ++q) {
+           var question = questions[q];
+           var idx = 1 + q;
+
+           document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+           for(var i in question.answers) {
+            document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+        }
+            document.writeln('</li>');
+        }
+        </script>
+    </ol>
+        <br>
+        <button onClick="Score()" value="Проверить результаты">
+            Проверить результаты
+            </button>
+    </form>
+    <p><a href="#Имя предыдущего файла#" class="nav">На следующую</a></p>
+</div>
+</body>
+ </html>   

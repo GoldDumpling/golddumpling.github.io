@@ -1,0 +1,173 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pangolin">
+<title> не</title>
+<style>
+    
+    span.quest {font-weight: bold;}
+    label {margin-left: 15px;}
+    .nav {font-size: 16px;}
+    body {
+        
+        color: rgb(rgb(255, 255, 255));
+        color: rgb(255, 255, 255);
+        font-size: 16px;
+      }
+      div:nth-child(1) {
+        font-family: 'Pangolin', serif;
+      }
+      div:nth-child(2) {
+        font-family: 'Pangolin', serif;
+      }
+      a {
+    color: rgb(212, 224, 252); /* Цвет текста */
+
+ button {
+  appearance: none;
+  border: 0;
+  border-radius: 5px;
+  background: #4676D7;
+  color: #fff;
+  padding: 8px 16px;
+  font-size: 16px;
+}
+   }
+
+</style>
+</head>
+<body>
+<div >
+    <div style="display:flex; justify-content: space-between;">
+    </div>
+<script>
+// Заголовок страницы (h2)
+var title = 'Уран - Тест';
+// Подзаголовок (h3)
+var subtitle = "Этот тест позволяет оценить Ваши знания";
+// Это ваши вопросы
+var questions=[
+{
+	text: "Какова средняя температура?",
+	answers: ["-195 °C",
+		  "-190 °C",
+		  "-196 °C"
+        ],
+	correctAnswer: 0 // нумерация ответов с нуля!
+},
+{
+	text: "Кем была открыта планета Уран?",
+	answers: ["У. Гершель",
+		  "Г. Галилей",
+		  "Х. Гюйгенс"],
+	correctAnswer: 0
+},
+{
+	text: "На каком месте по удалённости от Солнца находится Уран?",
+	answers: ["4",
+		  "5",
+		  "7"],
+	correctAnswer: 2
+},
+{
+	text: "Из чего в основном состоит Уран?",
+	answers: ["из водорода",
+		  "из гелия",
+		  "из кислорода"],
+	correctAnswer: 0
+},
+{
+	text: "Когда было открыто кольцо вокруг Урана?",
+	answers: ["1966",
+		  "1977",
+		  "1988"],
+	correctAnswer: 1
+},
+{
+	text: "Уран вращается «лёжа на боку», верно?",
+	answers: ["Да",
+		  "Нет"],
+	correctAnswer: 0
+},
+{
+	text: "Уран - бог чего?",
+	answers: ["Света",
+		  "Любви",
+		  "Неба"],
+	correctAnswer: 2
+},
+{
+	text: "Сколько спутников у Урана?",
+	answers: ["33",
+		  "28",
+		  "42"],
+	correctAnswer: 1
+}
+
+];
+
+var yourAns = new Array;
+var score = 0;
+
+function Engine(question, answer) {yourAns[question]=answer;}
+
+function Score(){
+   var answerText = "Результаты:\n";
+   for(var i = 0; i < yourAns.length; ++i){
+	var num = i+1;
+	answerText=answerText+"\n    Вопрос №"+ num +"";
+	if(yourAns[i]!=questions[i].correctAnswer){
+	    answerText=answerText+"\n    Правильный ответ: " +
+		questions[i].answers[questions[i].correctAnswer] + "\n";
+	  }
+        else{
+	    answerText=answerText+": Верно! \n";
+	    ++score;
+	    }
+       }
+
+   answerText=answerText+"\nВсего правильных ответов: "+score+"\n";
+
+   alert(answerText);
+   if(score>7){
+	    alert('Запомни этот код и запиши его куда-нибудь, он тебе понадобится - 540231')
+	  }
+   yourAns = [];
+   score = 0;
+   clearForm("quiz");
+}
+function clearForm(name) {
+   var f = document.forms[name];
+   for(var i = 0; i < f.elements.length; ++i) {
+	if(f.elements[i].checked)
+		f.elements[i].checked = false;
+}
+}
+</script>
+<h2><script>document.write(title)</script></h2>
+<h3><script>document.write(subtitle)</script></h3>
+
+    <form name="quiz">
+    <ol>
+        <script>
+        for(var q=0; q<questions.length; ++q) {
+           var question = questions[q];
+           var idx = 1 + q;
+
+           document.writeln('<li><span class="quest">' + question.text + '</span><br>');
+           for(var i in question.answers) {
+            document.writeln('<label><input type=radio name="q' + idx + '" value="' + i +
+            '" onClick="Engine(' + q + ', this.value)"> ' + question.answers[i] + '</label><br>');
+        }
+            document.writeln('</li>');
+        }
+        </script>
+    </ol>
+        <br>
+        <button onClick="Score()" value="Проверить результаты">
+            Проверить результаты
+            </button>
+    </form>
+    <p><a href="#Имя предыдущего файла#" class="nav">На следующую</a></p>
+</div>
+</body>
+ </html>   
