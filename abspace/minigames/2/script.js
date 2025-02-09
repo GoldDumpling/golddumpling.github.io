@@ -153,7 +153,7 @@
 				frag += '<div class="card" data-id="'+ v.id +'"><div class="inside">\
 				<div class="front"><img src="'+ v.img +'"\
 				alt="'+ v.name +'" /></div>\
-				<div class="back"><img src="css\Ёж.png"\
+				<div class="back"><img src="Ёж.png"\
 				alt="Codepen" /></div></div>\
 				</div>';
 			});
@@ -174,47 +174,47 @@
 		},
 		{
 			name: "css3",
-			img: "css\Planet_Mercury_-_GPN-2000-000465.jpg",
+			img: "Planet_Mercury_-_GPN-2000-000465.jpg",
 			id: 2
 		},
 		{
 			name: "html5",
-			img: "css\Venus_globe.jpg",
+			img: "Venus_globe.jpg",
 			id: 3
 		},
 		{
 			name: "jquery",
-			img: "css\The_Earth_seen_from_Apollo_17.jpg",
+			img: "The_Earth_seen_from_Apollo_17.jpg",
 			id: 4
 		}, 
 		{
 			name: "javascript",
-			img: "css\Mars_Hubble.jpg",
+			img: "Mars_Hubble.jpg",
 			id: 5
 		},
 		{
 			name: "node",
-			img: "css\Jupiter_Auroras.jpg",
+			img: "Jupiter_Auroras.jpg",
 			id: 6
 		},
 		{
 			name: "photoshop",
-			img: "css\Jupiter_Auroras.jpg",
+			img: "Jupiter_Auroras.jpg",
 			id: 7
 		},
 		{
 			name: "python",
-			img: "css\Satur_with_auroras.jpg",
+			img: "Satur_with_auroras.jpg",
 			id: 8
 		},
 		{
 			name: "rails",
-			img: "css\Uranus_clouds.jpg",
+			img: "Uranus_clouds.jpg",
 			id: 9
 		},
 		{
 			name: "sass",
-			img: "css\Neptune_Voyager2_color_calibrated.png",
+			img: "Neptune_Voyager2_color_calibrated.png",
 			id: 10
 		},
 	];
