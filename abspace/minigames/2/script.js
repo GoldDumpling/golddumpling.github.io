@@ -204,7 +204,7 @@
 		},
 		{
 			name: "python",
-			img: "Satur_with_auroras.jpg",
+			img: "Saturn_with_auroras.jpg",
 			id: 8
 		},
 		{
