@@ -168,7 +168,7 @@
 			// название
 			name: "php",
 			// адрес картинки
-			img: "Planet_Mercury_-_GPN-2000-000465.jpg",
+			img: "d41cb5c79373af70a99da753fd8cb03c.jpg",
 			// порядковый номер пары
 			id: 1,
 		},
@@ -199,7 +199,7 @@
 		},
 		{
 			name: "photoshop",
-			img: "Jupiter_Auroras.jpg",
+			img: "AQAGvrrA2DymreyvOYeZcpUt5ZjS8jNfzgBp3MA0vEFQTnxjrIfu3e37TcpMdjUOoqrfJuhrTSFWKgiMabXUCl-_-3o.jpg",
 			id: 7
 		},
 		{
